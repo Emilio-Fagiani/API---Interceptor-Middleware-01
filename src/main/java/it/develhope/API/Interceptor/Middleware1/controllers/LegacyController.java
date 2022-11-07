@@ -4,15 +4,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.LocalDate;
-
 @RestController
-@RequestMapping(value = "/time")
-public class BasicController {
-
+@RequestMapping(value = "/legacy")
+public class LegacyController {
 
     @GetMapping
-    public LocalDate getTime(){
-        return LocalDate.now();
+    public String getString(){
+        return "This is just old code";
     }
 }
